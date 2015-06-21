@@ -10,7 +10,7 @@ Lines beginning with the # symbol are comments. Furthermore, lines beginning wit
 	# Open the R script
 	# replace the "filepath" with the directory in which the file is saved
 
-source("filepath/cachematrix.R")
+source("filepath/cachematrix.R");
 
 	# create a "square" matrix (because the program only handles square matrices)
 
@@ -33,7 +33,7 @@ a$get();
 	#> [1,]    5   10
 	#> [2,]    7   11
 
-cacheSolve(a)
+cacheSolve(a);
 
 	#> [,1]        [,2]
 	#> [1,] -0.7333333  0.6666667
@@ -41,7 +41,7 @@ cacheSolve(a)
 
 	# the 2nd time we run the function,we get the cached value
 
-cacheSolve(a)
+cacheSolve(a);
 
 	#> getting cached data
 	#> [,1]        [,2]
@@ -53,11 +53,12 @@ cacheSolve(a)
 	# read the R script
 	# replace the "filepath" with the directory in which the file is saved
 
-source("filepath/cachematrix.R")
+source("filepath/cachematrix.R");
 
 	# calling the makeCacheMatrix function without arguments
 
 a <- makeCacheMatrix();
+
 summary(a);
 
 	#>            Length Class  Mode    
@@ -69,13 +70,14 @@ summary(a);
 	# creating a square matrix
 
 a$set( matrix(c(5,7,10,11), nrow = 2, ncol = 2) );
+
 a$get();
 
 	#>      [,1] [,2]
 	#> [1,]    5   10
 	#> [2,]    7   11
 
-cacheSolve(a)
+cacheSolve(a);
 
 	#> [,1]        [,2]
 	#> [1,] -0.7333333  0.6666667
@@ -83,7 +85,7 @@ cacheSolve(a)
 
 	# the 2nd time we run the function, we get the cached value
 
-cacheSolve(a)
+cacheSolve(a);
 	#> getting cached data
 	#> [,1]        [,2]
 	#> [1,] -0.7333333  0.6666667
