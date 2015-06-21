@@ -1,5 +1,3 @@
-# makeCacheMatrix and cacheSolve functions
-	
 	# See README.md for instructions on how to run the code and get output from it
 
 	# makeCacheMatrix is a function that contains a list of functions
