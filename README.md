@@ -20,6 +20,7 @@ source("filepath/cachematrix.R")
 a <- makeCacheMatrix( matrix(c(5,7,10,11), nrow = 2, ncol = 2) );
 
 summary(a);
+
 	#>            Length Class  Mode    
 	#> set        1      -none- function
 	#> get        1      -none- function
@@ -27,11 +28,13 @@ summary(a);
 	#> getinverse 1      -none- function
 
 a$get();
+
 	#>      [,1] [,2]
 	#> [1,]    5   10
 	#> [2,]    7   11
 
 cacheSolve(a)
+
 	#> [,1]        [,2]
 	#> [1,] -0.7333333  0.6666667
 	#> [2,]  0.4666667 -0.3333333
@@ -39,6 +42,7 @@ cacheSolve(a)
 	# the 2nd time we run the function,we get the cached value
 
 cacheSolve(a)
+
 	#> getting cached data
 	#> [,1]        [,2]
 	#> [1,] -0.7333333  0.6666667
@@ -55,6 +59,7 @@ source("filepath/cachematrix.R")
 
 a <- makeCacheMatrix();
 summary(a);
+
 	#>            Length Class  Mode    
 	#> set        1      -none- function
 	#> get        1      -none- function
@@ -65,11 +70,13 @@ summary(a);
 
 a$set( matrix(c(5,7,10,11), nrow = 2, ncol = 2) );
 a$get();
+
 	#>      [,1] [,2]
 	#> [1,]    5   10
 	#> [2,]    7   11
 
 cacheSolve(a)
+
 	#> [,1]        [,2]
 	#> [1,] -0.7333333  0.6666667
 	#> [2,]  0.4666667 -0.3333333
