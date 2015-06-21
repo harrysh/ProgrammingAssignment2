@@ -86,6 +86,7 @@ cacheSolve(a);
 	# the 2nd time we run the function, we get the cached value
 
 cacheSolve(a);
+
 	#> getting cached data
 	#> [,1]        [,2]
 	#> [1,] -0.7333333  0.6666667
